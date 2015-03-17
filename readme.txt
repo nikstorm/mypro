@@ -1,0 +1,242 @@
+<!-- 1. Link to jQuery (1.8 or later), -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+
+<!-- fotorama.css & fotorama.js. -->
+<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script> <!-- 16 KB -->
+
+<!-- 2. Add images to <div class="fotorama"></div>. -->
+<div class="fotorama">
+  <img src="http://s.fotorama.io/1.jpg">
+  <img src="http://s.fotorama.io/2.jpg">
+</div>
+
+
+
+Full list of options
+
+Options can be passed via data attributes:
+
+<div class="fotorama"
+     data-width="700"
+     data-maxwidth="100%"
+     data-ratio="16/9"
+     data-allowfullscreen="true"
+     data-nav="thumbs">
+  <img src="1.jpg">
+  <img src="2.jpg">
+</div>
+
+...or JavaScript:
+
+$('.fotorama').fotorama({
+  width: 700,
+  maxwidth: '100%',
+  ratio: 16/9,
+  allowfullscreen: true,
+  nav: 'thumbs'
+});
+
+...
+
+width Number or String
+
+Stage container width in pixels or percents.
+minwidth Number or String
+
+Stage container minimum width in pixels or percents.
+maxwidth Number or String
+
+Stage container maximum width in pixels or percents.
+height Number or String
+
+Stage container height in pixels or percents.
+minheight Number or String
+
+Stage container minimum height in pixels or percents.
+maxheight Number or String
+
+Stage container maximum height in pixels or percents.
+ratio Number or String
+
+Width divided by height. Recommended if you’re using percentage width.
+
+    Article: Dimensions
+
+margin Number
+
+Horizontal margins for frames in pixels.
+glimpse Number or String
+
+Glimpse size of nearby frames in pixels or percents.
+nav String or Boolean
+
+Navigation style:
+
+    'dots' Default
+    iPhone-style dots.
+    'thumbs'
+    Thumbnails.
+    false
+    Nothing.
+
+    Article: Thumbnails
+
+navposition Number or String
+
+Navigation container position relative to stage: 'bottom' or 'top'.
+
+    Article: Navigation position
+
+navwidth String
+
+Navigation container width in pixels or percents.
+thumbwidth Number
+
+Tumbnail width in pixels.
+thumbheight Number
+
+Tumbnail height in pixels.
+thumbmargin Number
+
+Size of thumbnail margins.
+thumbborderwidth Number
+
+Border width of the active thumbnail.
+allowfullscreen Boolean or String
+
+Allows fullscreen:
+
+    false Default
+    true
+    'native'
+
+    Article: Fullscreen
+
+fit String
+
+How to fit an image into a fotorama:
+
+    'contain' Default
+    'cover'
+    'scaledown'
+    'none'
+
+    Article: Fit
+
+thumbfit String
+
+How to fit thumbnail into its frame, cover by default.
+transition String
+
+Defines what transition to use:
+
+    'slide' Default
+    'crossfade'
+    'dissolve'
+
+clicktransition String
+
+Defines alternative transition to use on click.
+transitionduration Number
+
+Animation length in milliseconds.
+
+    Article: Transition
+
+captions Boolean
+
+Captions visibility.
+
+    Article: Captions
+
+hash Boolean
+
+    Article: Hash
+
+startindex Number or String
+
+Index or id of the frame that will be shown upon initialization of the fotorama.
+loop Boolean
+
+Enables loop.
+
+    Article: Loop
+
+autoplay Boolean or Number
+
+Enables slideshow. Turn it on with true or any interval in milliseconds.
+stopautoplayontouch Boolean
+
+Stops slideshow at any user action with the fotorama.
+
+    Article: Autoplay
+
+keyboard Boolean or Object
+
+Enables keyboard navigation.
+
+    Article: Keyboard
+
+arrows Boolean
+
+Turns on navigation arrows over the frames.
+
+    true Default
+    false
+    'always'
+    Do not hide controls on hover or tap.
+
+click Boolean
+
+Moving between frames by clicking.
+swipe Boolean
+
+Moving between frames by swiping.
+trackpad Boolean
+
+Enables trackpad support and horizontal mouse wheel as well.
+
+    Article: Arrows, click, swipe
+
+shuffle Boolean
+
+Shuffles frames at launch.
+
+    Article: Shuffle
+
+direction String
+
+Sets the frames direction: ltr or rtl.
+
+    Article: Right-to-left
+
+spinner Object
+
+Spinner options:
+
+$('.fotorama').fotorama({
+  spinner: {
+    lines: 13,
+    color: 'rgba(0, 0, 0, .75)'
+  }
+});
+
+Spin.js docs
+shadows Boolean
+
+Enables shadows.
+Defaults
+
+Override defaults by defining fotoramaDefaults before loading Fotorama:
+
+<script>
+  fotoramaDefaults = {
+    width: 700,
+    maxwidth: '100%',
+    ratio: 16/9,
+    allowfullscreen: true,
+    nav: 'thumbs'
+  }
+</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>
